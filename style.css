@@ -1,0 +1,422 @@
+/* =================================
+   PORTFOLIO - PRESIDENCE DU BENIN
+   Feuille de style principale
+================================= */
+
+:root {
+    --vert: #008751;
+    --jaune: #FCD116;
+    --rouge: #E8112D;
+    --bleu: #0a3d62;
+    --fond: #f4f6f8;
+    --blanc: #ffffff;
+    --texte: #222222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fond);
+    color: var(--texte);
+    line-height: 1.7;
+}
+
+/* BARRE DU DRAPEAU */
+
+.drapeau {
+    display: flex;
+    height: 8px;
+}
+
+.drapeau div {
+    flex: 1;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--vert);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 5px solid var(--jaune);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+nav {
+    max-width: 1150px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: var(--jaune);
+    color: #222;
+}
+
+/* BOUTON MENU MOBILE */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    width: auto;
+    padding: 7px 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* CONTENEUR */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 20px;
+}
+
+section {
+    margin-bottom: 35px;
+    scroll-margin-top: 110px;
+}
+
+/* ACCUEIL */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    border-top: 6px solid var(--rouge);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.hero img {
+    width: 280px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 5px solid var(--vert);
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: var(--vert);
+    margin: 10px 0;
+}
+
+.hero h1 span {
+    color: var(--rouge);
+}
+
+/* BADGES */
+
+.badge {
+    display: inline-block;
+    background: var(--jaune);
+    color: #222;
+    padding: 5px 13px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+/* BOUTONS */
+
+.btn {
+    display: inline-block;
+    background: var(--vert);
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+    margin: 10px 5px 0 0;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #006a40;
+}
+
+.btn-jaune {
+    background: var(--jaune);
+    color: #222;
+}
+
+.btn-rouge {
+    background: var(--rouge);
+}
+
+/* TITRES */
+
+.section-title {
+    color: var(--vert);
+    border-left: 6px solid var(--rouge);
+    padding-left: 12px;
+    margin: 35px 0 20px;
+    font-size: 25px;
+}
+
+/* GRILLE ET CARTES */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    border-bottom: 4px solid var(--jaune);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    color: var(--vert);
+    margin-bottom: 10px;
+}
+
+.card span {
+    display: inline-block;
+    background: #e8f5ee;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 3px;
+}
+
+.projet img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 9px;
+    margin-bottom: 12px;
+}
+
+/* FORMULAIRE */
+
+form {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-top: 5px solid var(--vert);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--vert);
+}
+
+button {
+    background: var(--vert);
+    color: white;
+    border: none;
+    padding: 13px;
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* STATISTIQUES */
+
+#stats {
+    background: var(--vert);
+    color: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#stats b {
+    display: block;
+    color: var(--jaune);
+    font-size: 28px;
+}
+
+/* PIED DE PAGE */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        padding-top: 15px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 22px;
+    }
+
+    .hero img {
+        width: 100%;
+        max-width: 280px;
+        height: 320px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 18px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    #stats {
+        flex-direction: column;
+    }
+}
+
+/* UNIFORMISATION DES IMAGES DE LA PAGE REALISATIONS */
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Images principales des projets */
+.card.projet img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Adaptation aux téléphones */
+@media screen and (max-width: 768px) {
+    .card img,
+    .card.projet img {
+        height: 200px;
+    }
+}
+
+.card h3 {
+    color: #008751;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
